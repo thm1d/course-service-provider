@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/datatables-select.min.css') }}">
 </head>
-<body>
+<body class="fix-header fix-sidebar">
+
+	@include('layout.menu')
 
 	@yield('content')
 
