@@ -24,6 +24,8 @@
 
 
                         <li> <a href="{{ route('visitor.index') }}" ><span> <i class="fas fa-users"></i> </span><span class="hide-menu">Visitor</span></a></li>
+
+                        <li> <a href="{{ route('service.index') }}" ><span> <i class="fas fa-globe"></i> </span><span class="hide-menu">Services</span></a></li>
                     </ul>
                 </nav>
             </div>
