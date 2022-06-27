@@ -53,11 +53,41 @@
     <div class="modal-content">
       <div class="modal-body p-3 text-center">
       	<h4 class="mt-4">Do You want To Delete This Item?</h4>
-        <h4 class="mt-4" id="serviceId" hidden> </h4>
+        <h4 class="mt-4" id="serviceDeleteId" hidden> </h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">No</button>
         <button type="button" id="deleteConfirmBtn" class="btn btn-danger">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="editModal" data-mdb-backdrop="static"
+  data-mdb-keyboard="false" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body p-5 text-center">
+            <div id="serviceEditForm" class="d-none w-100">
+                <h4 class="mt-4" id="serviceEditId" hidden> </h4>
+                <input type="text" id="serviceNameId" class="form-control mb-4" placeholder="Service Name" />
+                <input type="text" id="serviceDescId" class="form-control mb-4" placeholder="Service Description" />
+                <input type="text" id="serviceImgId" class="form-control mb-4" placeholder="Service Image" />
+            </div>
+
+            
+            <img id="editLoaderId" class="loading-icon m-5" src="{{ asset('images/loading.gif') }}">
+               
+            <h5 id="editMsgId" class="d-none">Something Went Wrong!</h5>
+            
+
+            
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">Cancel</button>
+        <button type="button" id="updateConfirmBtn" class="btn btn-danger">Save</button>
       </div>
     </div>
   </div>

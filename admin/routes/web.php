@@ -22,3 +22,6 @@ Route::get('/service', [ServiceController::class, 'ServiceIndex'])->name('servic
 Route::get('/getServicesData', [ServiceController::class, 'GetServiceData'])->name('service.data');
 Route::post('/serviceDelete', [ServiceController::class, 'ServiceDelete'])->name('service.delete');
 
+Route::post('/serviceUpdate', [ServiceController::class, 'ServiceUpdate'])->name('service.update');
+Route::post('/serviceDetails', [ServiceController::class, 'GetServiceDetails'])->name('service.details');
+
