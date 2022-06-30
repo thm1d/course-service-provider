@@ -46,9 +46,11 @@ class ServiceController extends Controller
         $des= $req->input('des');
         $img= $req->input('img');
 
-        // $result= ServicesModel::whereId($id)->update(['service_name'=>$name,'service_des'=>$des,'service_img'=>$img]);
+    
+        // $result = ServicesModel::whereId($id)->update(['service_name'=>$name,'service_des'=>$des,'service_img'=>$img]);
 
-        // if($result==true){      
+        // //var_dump($result);
+        // if($result){      
         //    return 1;
         // }
         // else{

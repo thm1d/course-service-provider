@@ -274,7 +274,7 @@
 
             })
             .then(function(response) {
-                console.log(response);
+                //console.log(response);
                 $('#updateConfirmBtn').html("Save");
                 if(response.status == 200){
                     if(response.data==1){
