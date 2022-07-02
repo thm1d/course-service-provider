@@ -30,7 +30,7 @@ Route::post('/serviceDetails', [ServiceController::class, 'GetServiceDetails'])-
 
 
 Route::get('/course', [CourseController::class, 'CourseIndex'])->name('course.index');
-Route::get('/getCoursesData', [CourseController::class, 'GetCourseData'])->name('course.data');
+Route::get('/getCoursesData', [CourseController::class, 'GetCoursesData'])->name('course.data');
 Route::post('/courseDelete', [CourseController::class, 'CourseDelete'])->name('course.delete');
 Route::post('/courseAdd', [CourseController::class, 'CourseAdd'])->name('course.add');
 Route::post('/courseUpdate', [CourseController::class, 'CourseUpdate'])->name('course.update');

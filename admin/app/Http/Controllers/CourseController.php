@@ -27,7 +27,7 @@ class CourseController extends Controller
     function CourseAdd(Request $req){
 
         $course_name= $req->input('name');
-        $course_des= $req->input('name');
+        $course_des= $req->input('des');
         $course_fee= $req->input('fee');
         $course_totalenroll= $req->input('enroll');
         $course_totalclass= $req->input('class');
