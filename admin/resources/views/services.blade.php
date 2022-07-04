@@ -164,9 +164,7 @@
                     $('#serviceEditId').html(id);
                     editServicesData(id);
                     $('#editModal').modal('show');
-                })
-
-                
+                })                
 
             }
             else {

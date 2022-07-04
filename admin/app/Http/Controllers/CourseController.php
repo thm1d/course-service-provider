@@ -55,7 +55,7 @@ class CourseController extends Controller
     function CourseUpdate(Request $req){
         $id= $req->input('id');
         $course_name= $req->input('name');
-        $course_des= $req->input('name');
+        $course_des= $req->input('des');
         $course_fee= $req->input('fee');
         $course_totalenroll= $req->input('enroll');
         $course_totalclass= $req->input('class');
@@ -73,7 +73,7 @@ class CourseController extends Controller
         //     'course_img'=>$course_img
         // ]);
 
-        // 
+        
         // if($result){      
         //    return 1;
         // }
@@ -92,7 +92,7 @@ class CourseController extends Controller
 
         $result = $courseModel->save(); 
              
-        if($result==true){      
+        if($result){      
            return 1;
         }
         else{
