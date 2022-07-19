@@ -6,7 +6,7 @@
 <div class="row">
 <div class="col-md-12 p-5">
 	<button id="addNewBtnId" class="btn btn-sm btn-danger my-3">Add New</button>
-<table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="courseTableId" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
       
@@ -151,7 +151,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">No</button>
-        <button type="button" id="deleteConfirmBtn" class="btn btn-danger">Yes</button>
+        <button type="button" id="courseDeleteConfirmBtn" class="btn btn-danger">Yes</button>
       </div>
     </div>
   </div>

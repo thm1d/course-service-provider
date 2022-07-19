@@ -7,7 +7,7 @@
 <div class="col-md-12 p-5">
 <button id="addNewBtnId" class="btn btn-sm btn-danger my-3">Add New</button>
 
-<table id="" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<table id="serviceTableId" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th class="th-sm">Image</th>
@@ -81,7 +81,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">No</button>
-        <button type="button" id="deleteConfirmBtn" class="btn btn-danger">Yes</button>
+        <button type="button" id="serviceDeleteConfirmBtn" class="btn btn-danger">Yes</button>
       </div>
     </div>
   </div>
@@ -133,6 +133,7 @@
             $('#mainDiv').removeClass('d-none');
             $('#loaderDiv').addClass('d-none');
 
+            $('#serviceTableId').DataTable().destroy();
             $('#service_table').empty();
 
             if(response.status==200) {
@@ -164,7 +165,12 @@
                     $('#serviceEditId').html(id);
                     editServicesData(id);
                     $('#editModal').modal('show');
-                })                
+                }) 
+
+
+                $('#serviceTableId').DataTable();
+                $('.dataTables_length').addClass('bs-select');
+                         
 
             }
             else {
@@ -180,7 +186,7 @@
     }
 
     // Delete Confirm Button
-    $('#deleteConfirmBtn').click(function(){
+    $('#serviceDeleteConfirmBtn').click(function(){
         var id = $('#serviceDeleteId').html();
 
         deleteServicesData(id);
@@ -188,13 +194,13 @@
 
 
     function deleteServicesData(deleteId){
-        $('#deleteConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); // spinner
+        $('#serviceDeleteConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); // spinner
 
         axios.post('/serviceDelete', {id:deleteId})
         .then(function(response) {
-            $('#deleteConfirmBtn').html("Yes");
+            $('#serviceDeleteConfirmBtn').html("Yes");
             if(response.status == 200){
-                if(response.data==1){
+                if(response.data == 1){
                     $('#deleteModal').modal('hide');
                     toastr.success('Successfully Deleted')
                     getServicesData();

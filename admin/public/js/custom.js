@@ -6,6 +6,7 @@ function getCoursesData(){
             $('#mainDiv').removeClass('d-none');
             $('#loaderDiv').addClass('d-none');
 
+            $('#courseTableId').DataTable().destroy();
             $('#course_table').empty();
 
         
@@ -39,6 +40,8 @@ function getCoursesData(){
                 $('#deleteModal').modal('show');
             })
 
+            $('#courseTableId').DataTable();
+            $('.dataTables_length').addClass('bs-select');
   
 
         }
@@ -262,7 +265,7 @@ function updateCourseData(courseId, courseName, courseDes, courseFee, courseEnro
 
 
 // Delete Confirm Button
-$('#deleteConfirmBtn').click(function(){
+$('#courseDeleteConfirmBtn').click(function(){
     var id = $('#courseDeleteId').html();
 
     deleteCoursesData(id);
@@ -270,11 +273,11 @@ $('#deleteConfirmBtn').click(function(){
 
 
 function deleteCoursesData(deleteId){
-    $('#deleteConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); // spinner
+    $('#courseDeleteConfirmBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>"); // spinner
 
     axios.post('/courseDelete', {id:deleteId})
     .then(function(response) {
-        $('#deleteConfirmBtn').html("Yes");
+        $('#courseDeleteConfirmBtn').html("Yes");
         if(response.status == 200){
             if(response.data==1){
                 $('#deleteModal').modal('hide');

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/datatables-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery.dataTables.css') }}">
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
 </head>
 <body class="fix-header fix-sidebar">
@@ -35,6 +36,7 @@
 	<script type="text/javascript" src="{{ asset('js/custom.min-2.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/datatables.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/datatables-select.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('js/jquery.dataTables.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/axios.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>

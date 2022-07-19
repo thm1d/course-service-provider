@@ -78,7 +78,7 @@ class ServiceController extends Controller
         $id = $request->input('id');
         $result = ServicesModel::where('id','=',$id)->delete();
 
-        if($result == true) return 1;
+        if($result) return 1;
         else return 0;  
     }
 }
