@@ -37,7 +37,7 @@
 <script type="text/javascript">
 
 $(document).ready(function () {
-$('#VisitorDt').DataTable();
+$('#VisitorDt').DataTable({"ordering": false});
 $('.dataTables_length').addClass('bs-select');
 });
 

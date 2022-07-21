@@ -52,7 +52,7 @@
   data-mdb-keyboard="false" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-        <div class="modal-body p-5 text-center">
+        <div class="modal-body p-3 text-center">
             <div id="serviceAddForm" class="w-100">
                 <h6 class="mb-4">Add New Service </h6>
                 <input type="text" id="serviceNameAddId" class="form-control mb-4" placeholder="Service Name" />
@@ -77,7 +77,7 @@
     <div class="modal-content">
       <div class="modal-body p-3 text-center">
       	<h4 class="mt-4">Do You want To Delete This Item?</h4>
-        <h4 class="mt-4" id="serviceDeleteId" hidden> </h4>
+        <h4 class="mt-4" id="serviceDeleteId d-none"> </h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">No</button>
@@ -93,9 +93,15 @@
   data-mdb-keyboard="false" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-        <div class="modal-body p-5 text-center">
+        <div class="modal-header">
+            <h5 class="modal-title">Update Service</h5>
+            <button type="button" class="close" data-mdb-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body p-3 text-center">
             <div id="serviceEditForm" class="d-none w-100">
-                <h4 class="mt-4" id="serviceEditId" hidden> </h4>
+                <h4 class="mt-4" id="serviceEditId d-none"> </h4>
                 <input type="text" id="serviceNameId" class="form-control mb-4" placeholder="Service Name" />
                 <input type="text" id="serviceDescId" class="form-control mb-4" placeholder="Service Description" />
                 <input type="text" id="serviceImgId" class="form-control mb-4" placeholder="Service Image" />
@@ -168,7 +174,7 @@
                 }) 
 
 
-                $('#serviceTableId').DataTable();
+                $('#serviceTableId').DataTable({"ordering": false});
                 $('.dataTables_length').addClass('bs-select');
                          
 
